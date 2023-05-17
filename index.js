@@ -36,15 +36,15 @@ window.onload = function(){
 
 function updateTime() {
     // 날짜 클래스 변수
-    var currentTime = new Date();
+    var tTime = new Date();
 
     // 날짜 변수
-    var year = currentTime.getFullYear();
-    var month = currentTime.getMonth() + 1;
-    var date = currentTime.getDate();
+    var year = tTime.getFullYear();
+    var month = tTime.getMonth() + 1;
+    var date = tTime.getDate();
 
     var dayStr = "";
-    var day = currentTime.getDay();
+    var day = tTime.getDay();
 
     if ( day == 0 ) {
         dayStr = "일요일";
@@ -65,12 +65,12 @@ function updateTime() {
     var dateText = document.getElementById("currentDate");
     // 시, 분, 초 변수
     var hoursStr = "";
-    var hours = currentTime.getHours();
-    var minutes = currentTime.getMinutes();
-    var seconds = currentTime.getSeconds();
-    var milSeconds = currentTime.getMilliseconds();
+    var hours = tTime.getHours();
+    var minutes = tTime.getMinutes();
+    var seconds = tTime.getSeconds();
+    var milSeconds = tTime.getMilliseconds();
 
-    var timeText = document.getElementById("currentTime");
+    var timeText = document.getElementById("ttTime");
 
     // 시간 표기 변경 ( 13시 = PM 1시 )
     if ( hours >= 12 ) {
