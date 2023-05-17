@@ -35,10 +35,8 @@ window.onload = function(){
 }
 
 function updateTime() {
-    // 날짜 클래스 변수
     var tTime = new Date();
 
-    // 날짜 변수
     var year = tTime.getFullYear();
     var month = tTime.getMonth() + 1;
     var date = tTime.getDate();
@@ -63,7 +61,6 @@ function updateTime() {
     }
 
     var dateText = document.getElementById("tDate");
-    // 시, 분, 초 변수
     var hoursStr = "";
     var hours = tTime.getHours();
     var minutes = tTime.getMinutes();
@@ -72,7 +69,6 @@ function updateTime() {
 
     var timeText = document.getElementById("ttTime");
 
-    // 시간 표기 변경 ( 13시 = PM 1시 )
     if ( hours >= 12 ) {
         hoursStr = "오후 ";
 
@@ -82,13 +78,10 @@ function updateTime() {
     } else {
         hoursStr = "오전 ";
     }
-
-    // 0을 채워 넣어 한 자리 숫자를 두 자리로 변환
     hours = (hours < 10 ? "0" : "") + hours;
     minutes = (minutes < 10 ? "0" : "") + minutes;
     seconds = (seconds < 10 ? "0" : "") + seconds;
 
-    // 0을 2개 채워 넣어 한자리 숫자를 세 자리로 변환 | 두 자리 숫자는 0을 1개 채워넣기
     milSeconds = (milSeconds < 10 ? "00" : "") + milSeconds;
     milSeconds = (milSeconds >= 10 && milSeconds < 100 ? "0" : "") + milSeconds;
 
