@@ -62,7 +62,7 @@ function updateTime() {
         dayStr = "토요일";
     }
 
-    var dateText = document.getElementById("currentDate");
+    var dateText = document.getElementById("tDate");
     // 시, 분, 초 변수
     var hoursStr = "";
     var hours = tTime.getHours();
