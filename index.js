@@ -67,7 +67,7 @@ function updateTime() {
     var seconds = tTime.getSeconds();
     var milSeconds = tTime.getMilliseconds();
 
-    var timeText = document.getElementById("ttTime");
+    var timeText = document.getElementById("tTime");
 
     if ( hours >= 12 ) {
         hoursStr = "오후 ";
@@ -82,11 +82,8 @@ function updateTime() {
     minutes = (minutes < 10 ? "0" : "") + minutes;
     seconds = (seconds < 10 ? "0" : "") + seconds;
 
-    milSeconds = (milSeconds < 10 ? "00" : "") + milSeconds;
-    milSeconds = (milSeconds >= 10 && milSeconds < 100 ? "0" : "") + milSeconds;
-
     dateText.textContent = year + "년 " + month + "월 " + date + "일 " + dayStr;
 
-    var formattedTime = hoursStr + hours + "시 " + minutes + "분 " + seconds + "초 " + milSeconds;
+    var formattedTime = hoursStr + hours + "시 " + minutes + "분 " + seconds + "초 ";
     timeText.textContent = formattedTime;
 }
